@@ -1,8 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 30px;
 }
 
 a {
   color: #00B7FF;
+}
+
+nav {
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: gray;
+}
+
+nav a {
+  float: right;
+  display: block;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.container {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h2 {
+  margin-top: 10rem;
 }
