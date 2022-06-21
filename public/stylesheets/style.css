@@ -6,7 +6,10 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
   line-height: 30px;
-  background-color: rgb(209, 209, 209);
+  background: linear-gradient(200deg, rgba(0, 0, 0, 0.251), rgba(255, 255, 255, 0.703), rgba(0, 0, 0, 0.774)),url("https://wallpapers.com/images/high/hd-blue-sky-wallpaper-full-hd-picture-mvehfqz6w2ges2dj.jpg");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
 }
@@ -18,6 +21,7 @@ nav {
   top: 0;
   right: 0;
   background: linear-gradient(0deg, rgb(0,0,0), rgb(150,150,150));
+  opacity: 80%;
 }
 
 nav a {
@@ -53,19 +57,21 @@ tr th {
 }
 
 .new-flight {
-  border: 1px solid black;
+  border: 2px solid white;
   width: 50%;
   transform: translate(50%);
   text-align: left;
   padding: 2rem;
   line-height: 3rem;
-  background-color: rgb(138, 169, 181);
+  background: linear-gradient(200deg, rgba(255, 255, 255, 0.251), rgba(146, 146, 146, 0.26), rgba(255, 255, 255, 0.302));
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
+  margin-top: 3rem;
+  font-size: 18px;
 }
 
 .btn {
   text-align: center;
-  transform: translate(100%, 30%);
+  transform: translate(125%, 40%);
   font-size: 20px;
   cursor: pointer;
   border: none;
