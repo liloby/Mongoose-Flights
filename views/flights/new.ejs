@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h2>Enter a New Flight</h2>
+    <h1>Enter a New Flight</h1>
     <div class="container new-flight">
       <form action="/flights" method="POST">
         <label
@@ -31,7 +31,7 @@
         ><br />
         <label
           >Departure Date:
-          <input type="datetime-local" name="departs" /> </label
+          <input type="datetime-local" name="departs" value="<%= departsDate %>" /> </label
         ><br />
         <input class="btn" type="submit" value="Add Flight" />
       </form>

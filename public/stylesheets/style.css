@@ -50,10 +50,12 @@ h1, h2 {
 
 tr td{
   padding: 20px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.542), rgba(255, 255, 255, 0.74));
 }
 
 tr th {
   text-decoration: underline;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.542), rgba(255, 255, 255, 0.74));
 }
 
 .new-flight {
@@ -81,4 +83,17 @@ tr th {
 .btn:hover {
   background: gray;
   color: white;
+}
+
+.main-title {
+  font-size: 5rem;
+  margin-top: 32rem;
+}
+
+p {
+  font-style: italic;
+}
+
+.list {
+  margin-bottom: 3rem;
 }
