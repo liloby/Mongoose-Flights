@@ -27,6 +27,9 @@ function create(req, res) {
 
 function index(req, res) {
     Flight.find({}, function(err, flights) {
+        flights = flights.sort(function(a, b) {
+            return a.departs - b.departs
+        })
         res.render('flights/index', {
             flights
         })
