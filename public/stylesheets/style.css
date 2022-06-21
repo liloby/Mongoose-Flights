@@ -38,6 +38,14 @@ nav a:hover {
   color: rgb(255, 255, 255);
 }
 
+.fa-plane-departure {
+  color: orange;
+  font-size: 35px;
+  float: left;
+  margin-top: .4rem;
+  margin-left: 1rem;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -96,4 +104,22 @@ p {
 
 .list {
   margin-bottom: 3rem;
+}
+
+#show-page {
+  width: 60%;
+  display: grid;
+  grid-template-columns: auto auto;
+  transform: translate(32%, 20%);
+  border: 2px solid white;
+  padding: 2rem;
+  line-height: 3rem;
+  background: linear-gradient(200deg, rgba(255, 255, 255, 0.251), rgba(146, 146, 146, 0.26), rgba(255, 255, 255, 0.302));
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
+  margin-top: 3rem;
+  font-size: 18px;
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
 }
