@@ -6,7 +6,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
   line-height: 30px;
-  background: linear-gradient(200deg, rgba(0, 0, 0, 0.251), rgba(255, 255, 255, 0.703), rgba(0, 0, 0, 0.774)),url("https://wallpapers.com/images/high/hd-blue-sky-wallpaper-full-hd-picture-mvehfqz6w2ges2dj.jpg");
+  background: linear-gradient(200deg, rgba(0, 0, 0, 0.251), rgba(81, 81, 81, 0.703), rgba(0, 0, 0, 0.774)),url("https://wallpapers.com/images/high/hd-blue-sky-wallpaper-full-hd-picture-mvehfqz6w2ges2dj.jpg");
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,7 +79,7 @@ tr th {
   font-size: 18px;
 }
 
-.btn {
+.btn, #add-review-form input[type="submit"] {
   text-align: center;
   transform: translate(125%, 40%);
   font-size: 20px;
@@ -88,7 +88,7 @@ tr th {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.071);
 }
 
-.btn:hover {
+.btn:hover, #add-review-form input[type="submit"]:hover {
   background: gray;
   color: white;
 }
@@ -112,14 +112,41 @@ p {
   grid-template-columns: auto auto;
   transform: translate(32%, 20%);
   border: 2px solid white;
+  line-height: 2.5rem;
+  background: linear-gradient(200deg, rgba(255, 255, 255, 0.251), rgba(146, 146, 146, 0.26), rgba(255, 255, 255, 0.302));
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
+  font-size: 18px;
+}
+
+#show-page div:nth-child(even) {
+  font-weight: bold;
+}
+
+#add-review-form {
+  border: 2px solid white;
+  width: 50%;
+  transform: translate(50%, -30%);
   padding: 2rem;
   line-height: 3rem;
   background: linear-gradient(200deg, rgba(255, 255, 255, 0.251), rgba(146, 146, 146, 0.26), rgba(255, 255, 255, 0.302));
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
   margin-top: 3rem;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#show-page div:nth-child(even) {
-  font-weight: bold;
+#add-review-form input[type="submit"] {
+  transform: translate(0%, 0%);
+}
+
+.arrival {
+  width: 60%;
+  transform: translate(0%, -5%);
+}
+
+.move-up {
+  transform: translate(0%, -250%);
 }

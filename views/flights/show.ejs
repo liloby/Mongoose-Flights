@@ -1,21 +1,23 @@
 <%- include('../partials/header') %>
 <h1>Flight Details</h1>
 <container id="show-page">
-    <div>Airline: </div>
-    <div><%= flight.airline %> </div>
-    <div>Airport: </div>
-    <div><%= flight.airport %> </div>
-    <div>Flight No: </div>
-    <div><%= flight.flightNo %> </div>
-    <div>Departure Date: </div>
-    <div style="<%= flight.departs < Date.now() ? 'color: red' : '' %>"><%= flight.departs %> </div>
+  <div>Airline: </div>
+  <div><%= flight.airline %> </div>
+  <div>Airport: </div>
+  <div><%= flight.airport %> </div>
+  <div>Flight No: </div>
+  <div><%= flight.flightNo %> </div>
+  <div>Departure Date: </div>
+  <div style="<%= flight.departs < Date.now() ? 'color: red' : '' %>"><%= flight.departs %> </div>
+</container>
     
-    <br><br><h2>Add Destinations</h2>
+<container class="add-des">
+    <h2 class="move-up">Add Destinations</h2>
     <form id="add-review-form" method="POST"
     action="/flights/<%= flight._id %>/destinations">
     <label
     >Airport:
-    <select name="airport">
+    <select name="airport" required>
         <option value="DEN" selected>DEN</option>
         <option value="AUS">AUS</option>
         <option value="DFW">DFW</option>
@@ -24,30 +26,31 @@
     </select> </label
     <label
     >Arrival Date:
-    <input type="datetime-local" name="arrival" /> </label
+    <input type="datetime-local" name="arrival" required/> </label
     ><br />
     <input type="submit" value="Add Destination">
 </form>
+</container>
 
+<div class="container">
 <% if (flight.destinations.length) { %> 
-    <table>
-        <div>
-          <div>
-            <div>Airport</div>
-            <div>Arrival</div>
-          </div>
-        </div>
-        <div>
+    <table class="arrival">
+        <thead>
+          <tr>
+            <th>AIRPORT</th>
+            <th>ARRIVAL</th>
+          </tr>
+        </thead>
+        <tbody>
           <% flight.destinations.forEach(function(destination) { %>
-            <div>
-              <div><%= destination.airport %></div>
-              <div><%= destination.arrival %></div>
-            </div>
+            <tr>
+              <td><%= destination.airport %></td>
+              <td style="<%= destination.arrival < Date.now() ? 'color: red' : '' %>"><%= destination.arrival %></td>
+            </tr>
           <% }); %>
-        </div>
+        </tbody>
       </table>
     <% } else { %>
       <h5>No Destinations Yet</h5>
     <% } %>
-
-</container>
+  </div class="container">
