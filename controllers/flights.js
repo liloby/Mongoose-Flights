@@ -39,6 +39,12 @@ function index(req, res) {
 
 function show(req, res) {
     Flight.findById(req.params.id, function(err, flight) {
-        res.render('flights/show', {title: 'Flight Details', flight})
+        const selectedAirports = []
+        for (let i =0; i < flight.destinations.length; i++) {
+            console.log(flight.destinations[i].airport)
+            selectedAirports.push(flight.destinations[i].airport)
+            console.log(selectedAirports)
+        }
+        res.render('flights/show', {title: 'Flight Details', flight, selectedAirports})
     })
 }

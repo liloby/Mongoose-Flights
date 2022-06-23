@@ -6,11 +6,11 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
   line-height: 30px;
-  background: linear-gradient(200deg, rgba(0, 0, 0, 0.251), rgba(81, 81, 81, 0.703), rgba(0, 0, 0, 0.774)),url("https://wallpapers.com/images/high/hd-blue-sky-wallpaper-full-hd-picture-mvehfqz6w2ges2dj.jpg");
+  background: linear-gradient(200deg, rgba(0, 0, 0, 0.251), rgba(170, 170, 170, 0.703), rgba(0, 0, 0, 0.774)),url("https://wallpapers.com/images/high/hd-blue-sky-wallpaper-full-hd-picture-mvehfqz6w2ges2dj.jpg");
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 105vh;
   width: 100vw;
 }
 

@@ -8,7 +8,7 @@
   <div>Flight No: </div>
   <div><%= flight.flightNo %> </div>
   <div>Departure Date: </div>
-  <div style="<%= flight.departs < Date.now() ? 'color: red' : '' %>"><%= flight.departs %> </div>
+  <div><%= flight.departs %> </div>
 </container>
     
 <container class="add-des">
@@ -17,13 +17,14 @@
     action="/flights/<%= flight._id %>/destinations">
     <label
     >Airport:
-    <select name="airport" required>
-        <option value="DEN" selected>DEN</option>
-        <option value="AUS">AUS</option>
-        <option value="DFW">DFW</option>
-        <option value="LAX">LAX</option>
-        <option value="SAN">SAN</option>
-    </select> </label
+    <select name="airport">
+      <option <%= selectedAirports.includes('DEN') ? 'disabled' : "" %> value="DEN">DEN</option>
+        <option <%= selectedAirports.includes('AUS') ? 'disabled' : "" %> value="AUS">AUS</option>
+        <option <%= selectedAirports.includes('DFW') ? 'disabled' : "" %> value="DFW">DFW</option>
+        <option <%= selectedAirports.includes('LAX') ? 'disabled' : "" %> value="LAX">LAX</option>
+        <option <%= selectedAirports.includes('SAN') ? 'disabled' : "" %> value="SAN">SAN</option>
+        </select> </label
+
     <label
     >Arrival Date:
     <input type="datetime-local" name="arrival" required/> </label
@@ -45,7 +46,7 @@
           <% flight.destinations.forEach(function(destination) { %>
             <tr>
               <td><%= destination.airport %></td>
-              <td style="<%= destination.arrival < Date.now() ? 'color: red' : '' %>"><%= destination.arrival %></td>
+              <td><%= destination.arrival %></td>
             </tr>
           <% }); %>
         </tbody>

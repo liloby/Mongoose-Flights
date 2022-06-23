@@ -5,8 +5,13 @@
       <form action="/flights" method="POST">
         <label
           >Airline:
-          <input type="text" name="airline" /> </label
-        ><br />
+          <select name="airline">
+            <option value="American">American</option>
+            <option value="Southwest">Southwest</option>
+            <option value="United">United</option>
+          </select> 
+          </label>
+          <br />
         <label
           >Airport:
           <select name="airport">
