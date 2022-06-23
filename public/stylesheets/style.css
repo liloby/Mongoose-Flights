@@ -53,7 +53,17 @@ nav a:hover {
 }
 
 h1, h2 {
-  margin-top: 10rem;
+  margin-top: 8rem;
+  padding: 5rem;
+}
+
+.main-title {
+  font-size: 5rem;
+  margin-top: 20rem;
+  background: linear-gradient(340deg, rgb(171, 154, 255), rgb(195, 255, 0), rgb(8, 0, 255), rgb(255, 255, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 tr td{
@@ -91,11 +101,6 @@ tr th {
 .btn:hover, #add-review-form input[type="submit"]:hover {
   background: gray;
   color: white;
-}
-
-.main-title {
-  font-size: 5rem;
-  margin-top: 32rem;
 }
 
 p {
@@ -150,3 +155,109 @@ p {
 .move-up {
   transform: translate(0%, -250%);
 }
+
+.home-start {
+  margin-top: 7rem;
+}
+
+.click-start {
+  text-decoration: none;
+  font-size: 2rem;
+  height: 3rem;
+  animation: colorloop 4s infinite;
+}
+
+@keyframes colorloop {
+  0% {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  33% {
+    color: blue;
+    font-size: 1rem;
+    margin-right: 0rem;
+  }
+
+  66% {
+    color: rgb(195, 255, 0);
+    font-size: 2rem;
+  }
+  
+  100% {
+    color: white;
+    font-size: 1rem;
+  }
+}
+
+.click-start:hover {
+  animation: none;
+  transform: scale(1.5);
+}
+
+
+.fa-plane-departure {
+  position: absolute;
+  left: 0;
+  animation: flightloop 15s infinite;
+}
+
+
+@keyframes flightloop {
+  0% {
+    font-size: 100%;
+    margin-right: 50rem;
+    opacity: 0%;
+  }
+  
+  25% {
+    font-size: 150%;
+    margin-right: 25rem;
+    opacity: 75%
+  }
+
+  50% {
+    font-size: 220%;
+    margin-right: 0rem;
+    opacity: 100%;
+  }
+  
+  65% {
+    font-size: 270%;
+    margin-left: 78rem;
+    opacity: 75%;
+  }
+
+  100% {
+    font-size: 280%;
+    margin-left: 250rem;
+    opacity: 0%;
+  }
+}
+
+/* @keyframes flightloop {
+  0% {
+    font-size: 280%;
+  }
+  
+  25% {
+    font-size: 250%;
+  }
+
+  50% {
+    font-size: 180%;
+    opacity: 75%;
+  }
+  
+  75% {
+    font-size: 150%;
+    margin-left: 50rem;
+    opacity: 50%;
+  }
+
+  100% {
+    font-size: 100%;
+    margin-left: 60rem;
+    opacity: 0%;
+  }
+} */
