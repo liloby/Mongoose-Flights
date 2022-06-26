@@ -56,11 +56,11 @@
     <% } %>
   </div class="container">
 
-<a href="">Create New Ticket</a>
+<a href="/flights/<%= flight._id %>/tickets/new">Create New Ticket</a>
 
   <div class="container">
-    <% if (tickets.length) { %> 
-        <table class="arrival">
+    <% if (tickets) { %> 
+        <table class="ticket">
             <thead>
               <tr>
                 <th>SEAT</th>
@@ -73,7 +73,6 @@
                 <tr>
                   <td><%= ticket.seat %></td>
                   <td><%= ticket.price %></td>
-                  <td><%= ticket.flight %></td>
                 </tr>
               <% }); %>
             </tbody>
