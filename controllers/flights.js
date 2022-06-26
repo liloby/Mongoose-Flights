@@ -45,8 +45,6 @@ function show(req, res) {
             selectedAirports.push(flight.destinations[i].airport)
         }
         Ticket.find({flight: flight._id}, function(err, tickets) {
-            tickets.forEach(function(ticket) {
-            })
             res.render('flights/show', {title: 'Flight Details', flight, selectedAirports, tickets})
         })
     })
