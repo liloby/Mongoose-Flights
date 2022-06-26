@@ -115,7 +115,7 @@ p {
   width: 60%;
   display: grid;
   grid-template-columns: auto auto;
-  transform: translate(32%, 20%);
+  transform: translate(32%, 0%);
   border: 2px solid white;
   line-height: 2.5rem;
   background: linear-gradient(200deg, rgba(255, 255, 255, 0.251), rgba(146, 146, 146, 0.26), rgba(255, 255, 255, 0.302));
@@ -130,7 +130,7 @@ p {
 #add-review-form {
   border: 2px solid white;
   width: 50%;
-  transform: translate(50%, -30%);
+  transform: translate(50%, -60%);
   padding: 2rem;
   line-height: 3rem;
   background: linear-gradient(200deg, rgba(255, 255, 255, 0.251), rgba(146, 146, 146, 0.26), rgba(255, 255, 255, 0.302));
@@ -149,11 +149,11 @@ p {
 
 .arrival {
   width: 60%;
-  transform: translate(0%, -5%);
+  transform: translate(0%, -20%);
 }
 
 .move-up {
-  transform: translate(0%, -250%);
+  transform: translate(0%, -60%);
 }
 
 .home-start {

@@ -55,3 +55,30 @@
       <h5>No Destinations Yet</h5>
     <% } %>
   </div class="container">
+
+<a href="">Create New Ticket</a>
+
+  <div class="container">
+    <% if (tickets.length) { %> 
+        <table class="arrival">
+            <thead>
+              <tr>
+                <th>SEAT</th>
+                <th>PRICE</th>
+                <th>FLIGHT</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% tickets.forEach(function(ticket) { %>
+                <tr>
+                  <td><%= ticket.seat %></td>
+                  <td><%= ticket.price %></td>
+                  <td><%= ticket.flight %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        <% } else { %>
+          <h5>No Tickets Yet</h5>
+        <% } %>
+      </div class="container">
