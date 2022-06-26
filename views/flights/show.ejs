@@ -1,4 +1,30 @@
 <%- include('../partials/header') %>
+<div class="container move-down">
+  <% if (tickets.length) { %> 
+    <table class="ticket">
+      <thead>
+        <tr>
+          <th>SEAT</th>
+          <th>PRICE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% tickets.forEach(function(ticket) { %>
+          <tr>
+            <td><%= ticket.seat %></td>
+            <td>$<%= ticket.price %></td>
+            <form action="/flights/<%= flight._id %>/tickets?_method=DELETE" method="POST">
+              <button type="submit">X</button>
+            </form>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <h5>No Tickets Yet</h5>
+        <% } %>
+      </div class="container">
+      <a href="/flights/<%= flight._id %>/tickets/new">Create New Ticket</a>
 <h1>Flight Details</h1>
 <container id="show-page">
   <div>Airline: </div>
@@ -56,28 +82,3 @@
     <% } %>
   </div class="container">
 
-<a href="/flights/<%= flight._id %>/tickets/new">Create New Ticket</a>
-
-  <div class="container">
-    <% if (tickets) { %> 
-        <table class="ticket">
-            <thead>
-              <tr>
-                <th>SEAT</th>
-                <th>PRICE</th>
-                <th>FLIGHT</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% tickets.forEach(function(ticket) { %>
-                <tr>
-                  <td><%= ticket.seat %></td>
-                  <td><%= ticket.price %></td>
-                </tr>
-              <% }); %>
-            </tbody>
-          </table>
-        <% } else { %>
-          <h5>No Tickets Yet</h5>
-        <% } %>
-      </div class="container">

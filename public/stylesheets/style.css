@@ -10,7 +10,7 @@ body {
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 105vh;
+  height: 125vh;
   width: 100vw;
 }
 
@@ -261,3 +261,7 @@ p {
     opacity: 0%;
   }
 } */
+
+.move-down {
+  transform: translate(0%, 150%);
+}
